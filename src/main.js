@@ -20,10 +20,13 @@ function onLoad(framework) {
 
   var testMaterial = new THREE.ShaderMaterial({
     uniforms: {
-
+      image: {
+        type: "t",
+        value: THREE.ImageUtils.loadTexture('./171.jpg')
+      }
     },
-    vertexShader: require(),
-    fragrmentShader: require()
+    vertexShader: require('test-vert.glsl'),
+    fragrmentShader: require('test-frag.glsl')
   });
 
   var adamMaterial = new THREE.ShaderMaterial({
