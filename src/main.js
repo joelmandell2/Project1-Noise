@@ -18,6 +18,14 @@ function onLoad(framework) {
   // initialize a simple box and material
   var box = new THREE.BoxGeometry(1, 1, 1);
 
+  var testMaterial = new THREE.ShaderMaterial({
+    uniforms: {
+
+    },
+    vertexShader: require(),
+    fragrmentShader: require()
+  });
+
   var adamMaterial = new THREE.ShaderMaterial({
     uniforms: {
       image: { // Check the Three.JS documentation for the different allowed types and values
